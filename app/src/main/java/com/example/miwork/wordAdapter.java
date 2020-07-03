@@ -44,15 +44,15 @@ public class wordAdapter extends ArrayAdapter<word> {
         // Get the object located at this position in the list
         word currentword = getItem(position);
         // find the TextView in the List_item.xml layout with the ID miWok_TextView.
-        TextView miwokWord = convertView.findViewById(R.id.miwok_word);
+        TextView miwokWord = convertView.findViewById(R.id.tv_for_miwok_words);
         // Get the mi wok translation from the currentWord object and set this text on
         //the MiWok translation.
         // settext word
         miwokWord.setText(currentword.getMiwokTranslation());
-        TextView defaultWord = convertView.findViewById(R.id.default_word);
+        TextView defaultWord = convertView.findViewById(R.id.tv_for_default_words);
         defaultWord.setText(currentword.getDefaultTranslation());
         // find the image resource
-        ImageView imageIcon = (ImageView) convertView.findViewById(R.id.icon);
+        ImageView imageIcon = (ImageView) convertView.findViewById(R.id.img);
         // visiability.Gone تعني ان الصورة مش هتظهر والمكان الي كانت هتظهر فيه هيختفي
         // visability . Invisable تعني ان الصورة مش هتظهر ولكن هيكون المكان بتاعها لسه موجود
         // visability.Visable تعني ان الصورة هتظهر عادي بشكل طبيعي
